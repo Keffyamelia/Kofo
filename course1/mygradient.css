@@ -1,0 +1,45 @@
+.grdbox {
+  background: blue;
+  width: 200px;
+  font-size: 40px;
+  color: white;
+  margin: 30px;
+}
+
+#grad {
+  border-radius: 50%;
+  background-image: radial-gradient(red, yellow, green);
+}
+
+#grad2 {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    indigo,
+    blue,
+    violet
+  );
+}
+
+#grad3 {
+  background-image: conic-gradient(
+    red 0deg,
+    red 90deg,
+    yellow 90deg,
+    yellow 180deg,
+    green 180deg,
+    green 270deg,
+    blue 270deg
+  );
+  border-radius: 50%;
+}
+
+#grad4{
+    background: linear-gradient(to right, red 0%, red 50%, yellow 50%, yellow 100%);
+    text-align: center;
+    padding: 10px;
+    color: black;
+}

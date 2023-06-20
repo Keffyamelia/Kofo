@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Classes</title>
+  </head>
+  <body>
+    <script>
+      class payrollClass {
+        constructor(name, designation, address) {
+          this.name = name;
+          this.rank = designation;
+          this.address = "address";
+        }
+
+        grossPay() {
+          if (this.rank === "senior") {
+            return 2000000;
+          } else {
+            return 1000000;
+          }
+        }
+
+        totalDeduction() {
+          if (this.rank === "senior") {
+            return 40000;
+          } else {
+            return 20000;
+          }
+        }
+
+        netPay() {
+          return this.grossPay() - this.totalDeduction();
+        }
+
+        output() {
+            document.write("Staff name: " + this.name + "<br>");
+            document.write("Staff rank: " + this.rank + "<br>");
+            document.write("Gross Pay: " + this.grossPay() + "<br>");
+            document.write("Deductions: " + this.totalDeduction() + "<br>");
+            document.write("________________ "  + "<br>");
+            document.write("Net Pay: " + this.netPay() + "<br>");
+            document.write("=================="+ "<br>");
+
+        }
+      }
+
+      const myPayRoll = new payrollClass("Tobi", "senior", "Ikeja Lagos");
+      myPayRoll.output();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Char Code</title>
+    </head>
+    <body>
+        <script>
+            let myname = "Kofoworola";
+            let fruits = "orange, pawpaw, banana, pineapple, watermelon, coconut";
+
+            //to generate the second character in the string above
+            //alert (myname.charAt(0));
+            //alert (myname.charCodeAt(0));
+
+            fruits.split(","); // this will split the string using comma.
+            fruits.split(" ");
+
+            let singlefruit = fruits.indexOf("banana");
+            //alert (singlefruit);
+            
+            //search
+            let position = fruits.search(/banana/);
+            alert(position);
+
+            //match
+            let mystring = "The little brown fox can jump over the lazy dog.";
+            alert(mystring.match("the"));
+            document.write("<br>" + mystring.length + " " + newstring);
+
+            if(fruits.startsWith("orange")) {
+                alert ("Yes. It is starting with orange");
+            }else {
+                alert ("No. It is not starting with orange");
+            }
+        </script>
+
+    </body>
+</html>

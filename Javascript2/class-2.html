@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Classes</title>
+    </head>
+    <body>
+        <script>
+            class person {
+                constructor(name) {
+                    this.name = name;
+                }
+
+                getname() {
+                    return this.name;
+                }
+            }
+
+            const newPerson = new Person("Samuel Owoeye");
+            document.write (newPerson.name);
+            document.write ("<br>");
+            document.write (newPerson.getname());
+        </script>
+    </body>
+</html>

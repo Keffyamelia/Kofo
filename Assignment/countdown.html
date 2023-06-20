@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SALAH COUNTDOWN</title>
+    <link rel="stylesheet" href="countdown.css" />
+  </head>
+  <body>
+    <div class="countdown__container">
+      <h1 class="countdown__heading">Countdown to Salah</h1>
+
+      <div class="countdown">
+          <div class="countdown__numbers">
+            <p>00</p>
+            <span>Days</span>
+          </div>
+
+          <div class="countdown__numbers">
+            <p>00</p>
+            <span>Hours</span>
+          </div>
+
+          <div class="countdown__numbers">
+            <p>00</p>
+            <span>Minutes</span>
+          </div>
+
+          <div class="countdown__numbers">
+            <p>00</p>
+            <span>Seconds</span>
+          </div>
+        
+      </div>
+    </div>
+
+    <script>
+        let dayBox = document.getElementById("day--box");
+        let hourBox = document.getElementById("hour--box");
+        let minuteBox = document.getElementById("minute--box");
+        let secondBox = document.getElementById("second--box");
+
+        let endDate = new Date(2023,6,29,13,55);
+
+        let endTime = endDate.getTime();
+
+        function countdown() {
+            let todayDate = new Date();
+
+            let todayTime = todayDate.getTime();
+
+            let remainingTime = endTime - todayTime;
+
+            let oneMinute = 60 * 1000;
+
+            let oneHour = 60 * oneMinute;
+
+            let oneDay = 24 * oneHour;
+
+            if (endTime < todayTime) {
+                document.querySelector(".countdown").innerHTML = "<h1>Countdown has expired</h1>";
+            }
+
+            else{
+                
+            }
+        }
+    </script>
+  </body>
+</html>

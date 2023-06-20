@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>My Validation</title>
+
+		
+
+		<link rel='stylesheet' href='bootstrap.min.css'>
+
+		<script src='jquery-3.5.1.min.js'></script>
+
+		<script src='popper.min.js'></script>
+
+		<script src='bootstrap.min.js'></script>
+
+		<style>
+
+			form{
+
+				width: 300px;
+
+				border: 1px solid black;
+
+				padding: 50px;
+
+				margin: auto;
+
+			}
+
+		</style>
+
+		<script>
+
+			function val_fn(name){
+
+				var nm = name;
+
+				
+
+				if (nm.length > 0){
+
+					// Something has been typed
+
+				} else {
+
+					document.getElementById("msg1").innerHTML = 
+
+					"Fullname cannot be empty. Please fill it.";
+
+					document.getElementById("msg1").style.color = "red";
+
+					document.getElementById("fn").style.border = 
+
+					"1px solid red";
+
+				} 
+
+			}
+
+			
+
+			function cancelerror(obj){
+
+				obj.style.border = "1px solid grey";
+
+				document.getElementById("msg1").innerHTML = "";
+
+			}
+
+		
+
+			function valme(){
+
+				var reply = confirm("Do you want to submit?");
+
+				var fullname = document.getElementById("fn").value;
+
+				var yourmail = document.getElementById("email").value;
+
+				var yourphone = document.getElementById("phone").value;
+
+				
+
+				if (reply){
+
+					alert("Your fullname is: "+fullname);
+
+					var fn = val_fn(fullname);
+
+						//return true;
+
+          } else {
+
+					return false;
+
+				}
+
+			}
+
+</script>
+
+	</head>
+
+	<body>
+
+		<form method="POST" onSubmit="return valme()" action="mydb.php">
+
+			<h1 class="text-center text-danger">VALIDATION FORM</h1>
+
+			<label for="fn">Fullname:</label>
+
+			<input type="text" id="fn" name="fn" class="form-control" 
+
+			placeholder="Enter full name" onchange="cancelerror(this)">
+
+			<br>
+
+			<div id="msg1"></div>
+
+			
+
+			<label for="email">Email:</label>
+
+			<input type="email" id="email" name="email" class="form-control" 
+
+			placeholder="Enter your email">
+
+			<br>
+
+			<div id="msg2"></div>
+
+			
+
+			<label for="phone">Phone Number</label>
+
+			<input type="text" id="phone" name="phone" class="form-control" 
+
+			placeholder="999-9999-9999">
+
+			<br>
+
+			<div id="msg3"></div>
+
+			
+
+			<br>
+
+			<input type="button" onclick="valme()" id="submit" name="submit" 
+
+			class="btn btn-success form-control" 
+
+			value="Validate">	
+
+			<br>
+
+			<div id="main_msg"></div>
+
+			<br>
+
+		</form>
+
+	</body>
+
+</html>

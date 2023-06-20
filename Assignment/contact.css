@@ -1,0 +1,30 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.holder{
+   background-color: #ccc; 
+}
+
+.horizontal {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: auto;
+    margin-top: auto;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  ul li a:hover {
+    background-color: blueviolet;
+    color: chocolate;
+    font-weight: 300;
+  }
+.display{
+  float: left;
+  width: 60%;
+}

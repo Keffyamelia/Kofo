@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel "stylesheet" href "index.css">
+    <style>
+        body{
+            font-family: Roboto ,cursive;
+        };
+    </style>
+
+    <title>Document</title>
+    </head>
+
+<body>
+    <div>
+        <form>
+            <h1>Creative Books Stores</h1>
+            <label>Item Categories</label>
+            <select id="cat" onChange="selectcategory (this)">
+                <option value=1>Books</option>
+                <option value=2>Magazines</option>
+                <option value=3>Journals</option>
+                <option value=4>CDs</option>
+            </select>
+            <br>
+            <h3>Items</h3>
+            <div id="items">
+                <select id="cat1" onChange="fixprice(this)">
+                    <option value="900">Half of a Yellow Sun</option>
+                    <option value="500">One Man One Matchet</option>
+                    <option value="700">The Marriage of Anasewa</option>
+                    <option value="900">Evil Encounter</option>
+                </select>
+            </div>
+
+            <div id="item5" style="display: none">
+                <select id="cat5" onChange="fixprice(this)">
+                    <option value="300">Half of a Yellow Sun</option>
+                    <option value="500">One Man One Matchet</option>
+                    <option value="700">The Marriage of Anasewa</option>
+                    <option value="900">Evil Encounter</option>
+                    </select>
+                    </div>
+
+                    <div id="item2" style="display: none">
+                <select id="cat2" onChange="fixprice(this)">
+                    <option value="500">Ovation</option>
+                    <option value="700">Prime People</option>
+                    <option value="900">The Economist</option>
+                    <option value="7800">Otitokoro</option>
+                </select>
+                </div>
+
+                <div id="item3">
+                    <select id="cat3" onChange="fixprice(this)">
+                        <option value="5000">Medical Journals</option>
+                        <option value="7000">Journal of Agriculture</option>
+                        <option value="9000">The Programmer</option>
+                        <option value="4500">The Jurist</option>
+                    </select>
+                </div>
+
+                <div id="item4">
+                    <select id="cat4" onChange="fixprice(this)">
+                        <option value="2500">Titanic</option>
+                        <option value="500">The Pudger</option>
+                        <option value="2000">Spiderman</option>
+                        <option value="3500">Harry Potter</option>
+                        </select>
+                </div>
+            <div>
+                <label>Quantity</label>
+                <input type="number" id="qty" value="1" step="1"
+                onChange="updatetotal(this)">
+            </div>
+            <div>
+                <label>Price</label>
+                <input type="number" id="price" readonly>
+            </div>
+            <div>
+                <label>Amount Payable</label>
+                <input type="text" id="amt" readonly>
+            </div>
+            </form>
+            </div>
+           <script>
+                function fixprice(obj){
+                    var price = obj.value;
+                    var q= document.getElementById("qty").value;
+                    document.getElementById("price").value = price;
+                    document.getElementById("amt").value = price* q;
+                }
+
+                function updatetotal(obj){
+                    var qt = obj.value;
+                    var price = document.getElementById("price").value;
+                    document.getElementById("amt").value=price *qt ;
+                }
+
+                function selectcategory(obj){
+                        var no = obj.value;
+                    if (no == 1){
+                        document.getElementById("items").innerHTML =
+                        document.getElementById("item5").innerHTML;
+                    }
+
+                if (no == 2){
+                    document.getElementById("items").innerHTML =
+                    document.getElementById("item2").innerHTML;
+
+                }
+
+                if (no == 3){
+                    document.getElementById("items").innerHTML =
+                    document.getElementById("item3").innerHTML;
+                }
+
+                if (no == 4){
+                    document.getElementById("items").innerHTML =
+                    document.getElementById("item4").innerHTML;
+                }
+
+            }
+
+            </script>
+</body>
+
+</html>

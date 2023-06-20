@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Salary Payslip</title>
+    </head>
+    <body>
+        <script>
+            let basicSalary=prompt("Enter your basic salary");
+            let housingAllowance=prompt("Enter your house rent");
+            let transportAllowance=prompt("Enter your transport allowance");
+            let grossPay = parseInt(basicSalary) + parseInt(housingAllowance) + parseInt(transportAllowance);
+
+            let tax = grossPay * 0.2;
+            let netPay = grossPay- tax;
+
+            document.write("<br>Your net income is /t "+netPay);
+            document.write("<br>Tax deducted on gross pay was/t "+tax);
+        </script>
+    </body>
+</html>

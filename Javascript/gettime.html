@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Time</title>
+    </head>
+
+    <body>
+        <div id="mytime">
+        <button type="button" onClick="startTime()">Start</button>
+        <button type="button" onClick="stopTime()">Stop</button>
+        </div>
+
+        <script>
+            var startpoint = 0;
+            var stoppoint = 0;
+            const dd = new Date();
+            var status = true;
+
+            const startTime = () => {
+                startpoint=dd.getTime();
+                status = true;
+                alert (startpoint);
+            }
+
+            const stopTime = () => {
+                const dd = new Date();
+                stoppoint = dd.getTime();
+                status = false;
+                alert (stoppoint);
+                var diff = stoppoint-startpoint;
+                alert ("The time difference: " +diff/1000);
+            }
+        </script>
+    </body>
+</html>

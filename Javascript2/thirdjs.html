@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            document.write("Value of a => (a = b) =>  ");
+            result = (a = b);
+            document.write(result);
+            document.write(linebreak);
+
+            document.write("Value of a => (a +=b)  => ");
+            result = (a += b);
+            document.write(result);
+            document.write(linebreak);
+
+            document.write("Value of a => (a -= b) => ");
+            result = (a -= b);
+            document.write(result);
+
+        </script>
+    </head>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var counter = 0;
+            var sum = 0;
+            var linebreak = "<br>";
+
+
+            document.write("<h1>Additions of number from 1 to 10<h1>");
+
+            while(counter < 10) {
+                counter = counter + 1;
+                sum = sum + counter;
+                document.write(counter);
+                document.write(linebreak);
+            }
+
+            document.write("The sum of all the numbers is: ");
+                document.write(sum);
+
+        </script>
+    </head>
+</html>

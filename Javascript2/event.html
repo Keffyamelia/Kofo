@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Events in Javascript</title>  
+    </head>
+    <style>
+        #ball {
+            height: 300px;
+            width: 300px;
+            background: blue;
+            border-radius: 50%;
+        }
+    </style>
+    <body>
+        <div id="box">
+
+        </div>
+
+        <div id="ball"></div>
+
+        <button type="button" onclick="changecolor()">Press Me</button>
+
+        <script>
+            mycolor = ["orange", "green", "blue", "black", "purple","yellow", "black"];
+
+            setTimeout (function () {
+                let text = document.getElementById("box");
+                text.innerHTML = "<h1>Javascript in Action!</h1>";
+                text.style.color = "red";
+            }, 5000);
+
+            setInterval (changecolor, 3000);
+
+            function changecolor() {
+                let circle = document.getElementById("ball");
+                let index = Math.floor (Math.random() * 7);
+                circle.style.backgroundColor = mycolor[index];
+            }
+        </script>
+    </body>
+</html>

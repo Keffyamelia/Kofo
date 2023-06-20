@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.traffic__light {
+    width: 50px;
+    border: 8px solid black;
+    padding: 10px 3px;
+    border-radius: 50px;
+}
+
+.traffic__light > div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: .3;
+    
+}

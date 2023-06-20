@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="clock" style="font-size:70px">
+
+
+
+    </div>
+
+    <button type="button" onclick="stoptime()">stop</button>
+
+    <button type="button" onclick="displaytime()">Start</button>
+
+    <script>
+
+        const displaytime=function(){
+
+        var dt = new Date();
+
+        var h= dt.getHours();
+
+        var m = dt.getMinutes();
+
+        var s = dt.getSeconds();
+
+
+
+
+
+        document.getElementById("clock").innerHTML = h + " : " + m + " : " + s;
+
+        }
+
+
+
+        const interval = setInterval(displaytime, 1000);
+
+        const stoptime = ()=>{clearInterval(interval)}
+
+
+
+        const starttime= ()=>{setInterval(interval)}
+
+        
+
+
+
+        </script>
+
+</body>
+
+</html>

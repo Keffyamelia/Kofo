@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body onload="display()">
+    <script>
+      //function display() {
+      //document.getElementById("mydiv1").innerHTML =
+      //"<H1> I CANT FIND THE HTML.</H1>";
+      //}
+
+      function youtypedthis(obj) {
+        var alphabet = obj.value;
+        document.getElementById("mydiv2").style.fontSize = "40px";
+        document.getElementById("mydiv1").style.fontSize = "40px";
+        document.getElementById("mydiv2").innerHTML = alphabet;
+      }
+    </script>
+
+    <div id="mydiv1">
+      asdf ; ikj asdf ; ikj asdf ; ikj asdf ; ikj asdf ; ikj asdf ;
+    </div>
+
+    <div id="mydiv2"></div>
+
+    <form
+      style="border: 1px solid black; padding: 50px; width: 300px; margin: auto"
+    >
+      <label for="fn">Fullname:</label>
+      <input type="text" id="fn" name="fn" onkeydown="youtypedthis(this)" />
+      <br /><br />
+      <label for="ema">Email:</label>
+      <input type="text" id="ema" name="ema" />
+      <input type="submit" id="submit" name="submit" value="Post" />
+    </form>
+  </body>
+</html>

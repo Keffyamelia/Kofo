@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Place Me INC</title>
+  </head>
+
+  <body>
+    <h1>PlaceMe, Inc.</h1>
+
+    <h2 id="jobtitle">Job Seekers Registration Form</h2>
+    <form name="job" action="formpro.html" method="POST">
+      <h2>LOGIN DETAILS:</h2>
+
+      <div class="form-row">
+        <label for="un">Username:</label>
+        <input
+          type="text"
+          id="un"
+          name="un"
+          placeholder="please enter your username here"
+        />
+        <div class="row-section">
+          <div class="input-holder">
+            <label for="pw">Password:</label>
+            <input
+              type="text"
+              id="pw"
+              name="pw"
+              placeholder="please enter your password here"
+            />
+          </div>
+
+          <div class="input-holder">
+            <label for="rep">Re-enter Password:</label>
+            <input
+              type="text"
+              id="rep"
+              name="rep"
+              placeholder="please confirm your password"
+            />
+          </div>
+        </div>
+      </div>
+
+      <h2>PERSONAL DETAILS:</h2>
+
+      <div class="form-row">
+        <div class="row-section">
+          <div class="input-holder">
+            <label for="fn">Firstname:</label>
+            <input
+              type="text"
+              id="fn"
+              name="fn"
+              placeholder="please enter your firstname here"
+            />
+          </div>
+
+          <div class="input-holder">
+            <label for="ea">Email Address:</label>
+            <input
+              type="text"
+              id="ea"
+              name="ea"
+              placeholder="please enter your email here"
+            />
+          </div>
+
+          <div class="input-holder">
+            <label for="pn">Phone Number:</label>
+            <input
+              type="text"
+              id="pn"
+              name="pn"
+              placeholder="please enter your phone number here"
+            />
+          </div>
+        </div>
+
+        <div class="row-section">
+          <div class="input-holder">
+            <label for="ln">Lastname:</label>
+            <input
+              type="text"
+              id="ln"
+              name="ln"
+              placeholder="please enter your lastname here"
+            />
+          </div>
+
+          <div class="input-holder">
+            <label for="g">Gender:</label>
+            <select>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Others</option>
+            </select>
+          </div>
+
+          <div class="input-holder">
+            <label for="pjl">Preferred Job Location:</label>
+            <select>
+              <option>New York</option>
+              <option>Maryland</option>
+              <option>Alberta</option>
+              <option>Chicago</option>
+              <option>Ontario</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <h2>PROFESSIONAL DETAILS:</h2>
+
+      <div class="form-row">
+        <div class="row-section">
+          <div class="input-holder">
+            <label for="ex">Experience(in years):</label>
+            <input
+              type="text"
+              id="ex"
+              name="ex"
+              placeholder="enter experience if any"
+            />
+          </div>
+
+          <div class="input-holder">
+            <label for="jc">Job Category:</label>
+            <select>
+              <option>Computer</option>
+              <option>Engineering</option>
+              <option>Personal Assistant</option>
+              <option>Receptionist</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row-section">
+          <div class="input-holder">
+            <label for="ks">Key Skills:</label>
+            <input
+              type="text"
+              id="ks"
+              name="ks"
+              placeholder="please enter key skills here"
+            />
+          </div>
+        </div>
+      </div>
+
+      <h2>QUALIFICATIONS:</h2>
+
+      <label for="dh">Degre Held:</label>
+      <select>
+        <option>B.SC</option>
+        <option>HND</option>
+        <option>Masters</option>
+        <option>PHD</option>
+      </select>
+      <br />
+
+      <label for="s">Specialization:</label>
+      <select>
+        <option>Computer</option>
+        <option>Consultancy</option>
+        <option>Engineering</option>
+        <option>Executive</option>
+      </select>
+
+      <br />
+      <br />
+
+      <input type="submit" id="submit" name="submit" value="Submit" />
+
+      <input type="reset" id="reset" name="reset" value="Reset" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+
+    <body>
+        <form name="student" action="formpro.html" method="POST" 
+        style="width: 950px; border: 1px solid black;
+        padding:50px; margin:auto">
+
+            <h1 style="text-align:center">Student Registration Form</h1>
+            
+
+            <table border="1">
+
+                <tr>
+                    <td>
+            <label for="fn">First Name:</label>
+                    </td>
+
+                    <td>
+            <input type="text" id="fn" name="fn" placeholder="Please enter your first name here">
+            </td>
+
+               <td>
+            <label for="md">Middle Name:</label>
+               </td>
+
+               <td>
+            <input type="text" id="md" name="md" placeholder="Enter your middle name">
+            </td>
+
+               <td>
+             <label for="sn">Surname:</label>
+               </td>
+
+               <td>
+            <input type="text" id="sn" name="sn" placeholder="Enter your surname">
+               </td>
+                </tr>
+
+                <tr>
+             <td colspan="6">
+               
+            <h2>Personal Data:</h2>
+            <hr>
+             </td>
+                </tr>
+
+                <tr>
+                    <td>
+            <label for="ad">Address:</label>
+                    </td>
+
+                    <td>
+            <input type="text" id="ad" name="ad" placeholder="Enter your address">
+                    </td>
+            
+               <td>
+             <label for="dob">Date of Birth:</label>
+               </td>
+
+               <td>
+            <input type="date" id="dob" name="dob">
+               </td>
+
+                </tr>
+            
+                <tr>
+                    <td>
+
+            <label for="cs">Course of Study:</label>
+                    </td>
+
+                    <td>
+            <input type="text" id="cs" name="cs" placeholder="Enter your course of study">
+                    </td>
+             
+               <td>
+            <label for="ag">Age of Student:</label>
+               </td>
+               
+               <td>
+            <input type="number" id="ag" name="ag" min=16 max="25 value=16">
+               </td>
+                </tr>
+
+                <tr>
+               
+            <td>
+            <label for="un">Username:</label>
+            </td>
+
+            <td>
+            <input type="text" id="un" name="un" placeholder="Enter your usernmae">
+            </td>
+             
+        
+             <td>
+            <label for="ps">Password:</label>
+             </td>
+
+             <td>
+            <input type="password" id="ps" name="ps" placeholder="Enter your password">
+             </td>
+                </tr>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right">
+            <input type="submit" id="submit" name="submit" value="Submit">
+                </td>
+
+                <td colspan="3">
+            <input type="reset" id="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+            </table>
+       </form>
+    </body>
+</html>

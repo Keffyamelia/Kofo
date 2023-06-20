@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animation in CSS</title>
+
+    <style>
+      div {
+        background-color: yellow;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        /* transition: transform 1s linear; */
+        animation: bgColor 2s ease-in infinite;
+      }
+
+      div:hover {
+        transform: translateX(200px);
+      }
+
+      @keyframes bgColor {
+        0% {
+          background-color: aqua;
+          transform: translateY(0);
+        }
+
+        50% {
+          background-color: brown;
+          transform: translateY(200px);
+        }
+
+        100% {
+          background-color: blue;
+          transform: translateY(0);
+        }
+      }
+
+      /*
+      div {
+        background: red;
+        color: white;
+        width: 200px;
+        height: 200px;
+        font-weight: bolder;
+        border-radius: 0px;
+      }
+
+      div:hover {
+        background: blue;
+        border-radius: 50%;
+        transition-delay: 3s;
+        transition: border-radius 10s;
+        transition-timing-function: ease-in;
+      }
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        top: 0px;
+        left: 0px;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+      }
+
+      /* The animation code*/
+      /*
+      @keyframes example {
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: yellow;
+        }
+        50% {
+          background-color: blue;
+        }
+        100% {
+          background-color: green;
+        }
+      }
+      */
+
+      .grad {
+        background-image: linear-gradient(red, green, yellow);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>MY DIV</div>
+    <div
+      class="grad"
+      style="background: red; width: 700px; font-size: 40px; color: white"
+    >
+      This is to test gradient
+    </div>
+  </body>
+</html>

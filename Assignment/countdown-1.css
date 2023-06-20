@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+body {
+    background-color: #111111;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.countdown--title {
+    padding: 20px;
+    text-align: center;
+}
+
+.countdown--text {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.countdown__container {
+    width: 80vw;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-bottom: 30px;
+}
+
+.countdown--box::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.12);
+    height: 100%;
+    width: 50%;
+    left: 0;
+}
+
+.container--box {
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+    /*padding-bottom: 30px;*/
+}
+
+span.number {
+    background-color: #202020;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+span.text {
+    font-size: 12px;
+    background-color: #2887e3;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 400;
+}

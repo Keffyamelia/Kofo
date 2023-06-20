@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Counter Classwork</title>
+    <link rel="stylesheet" href="counter.css" />
+  </head>
+  <body>
+
+    <h1 class="counter__text">MY COUNTER</h1>
+
+    <div class="counter__container">
+
+      <h1 class="counter__number" id="number">0</h1>
+
+      <div class="counter__align">
+
+        <button class="counter__add" id="add">+</button>
+
+        <button class="counter__reset" id="reset">Reset</button>
+
+        <button class="counter__subtract" id="subtract">-</button>
+
+      </div>
+      
+    </div>
+
+    <script>
+      let number = 0;
+
+      let addButton = document.getElementById("add");
+      let subtractButton = document.getElementById("subtract");
+      let counterNumber = document.getElementById("number");
+      let resetButton = document.getElementById("reset");
+
+      addButton.addEventListener("click", function() {
+        number++;
+        counterNumber.innerHTML = number;
+      });
+
+      subtractButton.addEventListener("click", function() {
+        number--;
+        counterNumber.innerHTML = number;
+      });
+
+      resetButton.addEventListener("click", function () {
+        number = 0;
+        counterNumber.innerHTML = number;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+body{
+    background: lightblue;
+    width: 1400px;
+}
+
+#hd{
+    font-size: 40px;
+    color: blue;
+    background: white;
+    margin: 0px;
+    padding: 100px;
+    font-weight: bolder;
+
+}
+
+#heading{
+    width: 100%;
+    display: flex;
+}
+
+.header2{
+    background: white;
+    text-align: left;
+    color:  blue;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'scractchmyback';
+    src: url('../scracthmyback.ttf');
+}
+
+.overview{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    height: 60px;
+    margin: 0px;
+    padding: 15px;
+    position: relative;
+}

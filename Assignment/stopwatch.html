@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MY STOPWATCH</title>
+    <link rel="stylesheet" href="stopwatch.css" />
+    <!--X   <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comme:wght@700&family=Lato:ital@1&display=swap"
+      rel="stylesheet"
+    /> -->
+  </head>
+  <body>
+    <div class="stopwatch">
+      <div class="stopwatch__timer">
+        <div id="hours">00:</div>
+
+        <div id="minutes">00:</div>
+
+        <div id="seconds">00:</div>
+
+        <div id="milliseconds">00</div>
+      </div>
+
+      <div class="buttons">
+        <button class="stopwatch__button" id="start" type="button">
+          START
+        </button>
+
+        <button class="stopwatch__button" id="stop" type="button">STOP</button>
+
+        <button class="stopwatch__button" id="reset" type="button">
+          RESET
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let hours = 0;
+      let minutes = 0;
+      let seconds = 0;
+      let milliseconds = 0;
+      let timer = undefined;
+
+      let isCounting = false;
+
+      let startButton = document.getElementById("start");
+      let stopButton = document.getElementById("stop");
+      let resetButton = document.getElementById("reset");
+
+      let hourElement = document.getElementById("hours");
+      let minuteElement = document.getElementById("minutes");
+      let secondElement = document.getElementById("seconds");
+      let millisecondElement = document.getElementById("milliseconds");
+
+      let prependZero = function (value) {
+        let valueString = value.toString();
+        if (value < 10) {
+          return "0" + valueString;
+        }
+        return valueString;
+      };
+
+      startButton.addEventListener("click", function () {
+        if (isCounting === true) {
+          return;
+        }
+
+        isCounting = true;
+
+        timer = setInterval(function () {
+          milliseconds = milliseconds + 100;
+          if (milliseconds === 1000) {
+            seconds = seconds + 1;
+            milliseconds = 0;
+          }
+          if (seconds === 60) {
+            minutes = minutes + 1;
+            seconds = 0;
+          }
+          if (minutes === 60) {
+            hours = hours + 1;
+            minutes = 0;
+          }
+          millisecondElement.innerText = milliseconds;
+          secondElement.innerText = prependZero(seconds) + ":";
+          minuteElement.innerText = prependZero(minutes) + ":";
+          hourElement.innerText = prependZero(hours) + ":";
+        }, 100);
+      });
+
+      stopButton.addEventListener("click", function () {
+        if (isCounting === false) {
+          return;
+        }
+        isCounting = false;
+        clearInterval(timer);
+      });
+
+      resetButton.addEventListener("click", function () {
+        isCounting  = false;
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        milliseconds = 0;
+        millisecondElement.innerText = "00";
+        secondElement.innerText = "00:";
+        minuteElement.innerText = "00:";
+        hourElement.innerText = "00:";
+        clearInterval(timer);
+      });
+    </script>
+  </body>
+</html>

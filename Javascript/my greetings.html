@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Greetings</title>
+    </head>
+    <body>
+        <div id="greet"></div>
+
+        <button type="button" onClick="greetme()">Greet me now</button>
+        <button type="button" onClick="calc()">Calculate</button>
+        <script>
+            function greetme(){
+           var dt = new Date();
+           var hours = dt.getHours();
+           var m = dt.getMinutes();
+
+           if (hours < 12){
+            alert("Good morning!");
+           }
+
+            if (hours >= 12 && hours <=16){
+                alert("Good Afternoon!");
+            }
+
+            if (hours > 16){
+                alert("Good Evening!");
+            }
+
+            }
+
+            const calc = ()=>{alert(10 * 5)}
+        </script>
+    </body>
+</html>

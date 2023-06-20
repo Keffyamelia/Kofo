@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <div data-myname="Franklin" data-age="30" onClick="changeme(this)">Click me</div>
+
+        <script>
+            function changeme(obj) {
+                obj.style.width = "400px";
+                obj.style.backgroundColor = "blue";
+                obj.style.color = "white";
+                obj.innerHTML = "THIS IS AN EXAMPLE OF OBJECT IN JAVASCRIPT";
+
+                let myage = obj.dataset.myname + " your age is " + obj.dataset.age + "years";
+                alert (myage);
+
+                
+
+            }
+        </script>
+    </body>
+</html>

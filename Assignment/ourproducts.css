@@ -1,0 +1,74 @@
+.header {
+  background-color: rgba(126, 213, 111, 0.8);
+  color: rgba(48, 100, 131, 0.8);
+  padding: 50px;
+  padding-top: 10px;
+}
+
+body {
+  margin: 60px;
+  padding: 0px;
+}
+
+.banner {
+  display: flex;
+  width: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.banner > .slide-box {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  animation: sliding 30s linear 3s infinite;
+}
+
+.slide-box > img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-box > .price {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+.horizontal {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+ul li a {
+  text-decoration: none;
+  color: orange;
+}
+ul li a:hover {
+  background-color: fuchsia;
+  color: chocolate;
+  font-weight: 300;
+}
+
+.car{
+  background-color: rgba(48, 100, 131, 0.8);
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      #main {
+        width: 220px;
+        padding: 30px;
+        margin: auto;
+        border: 1px solid black;
+        text-align: center;
+        background: blue;
+        border-radius: 10%;
+      }
+
+      .subdiv {
+        margin: 15px;
+      }
+
+      input[type="text"] {
+        text-align: right;
+        height: 40px;
+      }
+
+      input[type="button"] {
+        width: 40px;
+        height: 40px;
+        border-radius: 25%;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <form>
+        <div class="subdiv">
+          <input type="text" id="inputbox" name="inputbox" placeholder="0" />
+        </div>
+
+        <div class="subdiv">
+          <input type="button" id="zero" name="zero" value="0" />
+          <input type="button" id="one" name="one" value="1" />
+          <input type="button" id="two" name="two" value="2" />
+          <input type="button" id="three" name="three" value="3" />
+          <input type="button" id="four" name="four" value="4" />
+          <input type="button" id="five" name="five" value="5" />
+          <input type="button" id="six" name="six" value="6" />
+          <input type="button" id="seven" name="seven" value="7" />
+          <input type="button" id="eight" name="eight" value="8" />
+          <input type="button" id="nine" name="nine" value="9" />
+          <input type="button" id="add" name="add" value="+" />
+          <input type="button" id="minus" name="minus" value="-" />
+          <input type="button" id="multiply" name="multiply" value="*" />
+          <input type="button" id="divide" name="divide" value="/" />
+          <input type="button" id="submit" name="submit" value="=" />
+          <input type="button" id="clear" name="clear" value="C" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let first = "";
+      let second = "";
+      let operation = "";
+
+      let zeroButton = document.getElementById("zero");
+      let oneButton = document.getElementById("one");
+      let twoButton = document.getElementById("two");
+      let threeButton = document.getElementById("three");
+      let fourButton = document.getElementById("four");
+      let fiveButton = document.getElementById("five");
+      let sixButton = document.getElementById("six");
+      let sevenButton = document.getElementById("seven");
+      let eightButton = document.getElementById("eight");
+      let nineButton = document.getElementById("nine");
+      let inputBox = document.getElementById("inputbox");
+      let addButton = document.getElementById("add");
+      let minusButton = document.getElementById("minus");
+      let multiplyButton = document.getElementById("multiply");
+      let divideButton = document.getElementById("divide");
+      let submitButton = document.getElementById("submit");
+      let clearButton = document.getElementById("clear");
+
+      function add(a, b) {
+        let sum = a + b;
+        return sum;
+      }
+
+      let minus = function (a, b) {
+        return a - b;
+      };
+
+      let multiply = (a, b) => a * b;
+
+      let divide = (a, b) => {
+        return a / b;
+      };
+
+      addButton.addEventListener("click", function () {
+        operation = "+";
+        first = inputBox.value;
+        inputBox.value = "";
+        inputBox.focus();
+      });
+
+      minusButton.addEventListener("click", function () {
+        operation = "-";
+        first = inputBox.value;
+        inputBox.value = "";
+        inputBox.focus();
+      });
+
+      multiplyButton.addEventListener("click", function () {
+        operation = "*";
+        first = inputBox.value;
+        inputBox.value = "";
+        inputBox.focus();
+      });
+
+      divideButton.addEventListener("click", function () {
+        operation = "/";
+        first = inputBox.value;
+        inputBox.value = "";
+        inputBox.focus();
+      });
+
+      submitButton.addEventListener("click", function () {
+        second = inputBox.value;
+        let firstNumber = parseInt(first);
+        let secondNumber = parseInt(second);
+        if (operation === "+") {
+          inputBox.value = add(firstNumber, secondNumber);
+        } else if (operation === "-") {
+          inputBox.value = minus(firstNumber, secondNumber);
+        } else if (operation === "*") {
+          inputBox.value = multiply(firstNumber, secondNumber);
+        } else if (operation === "/") {
+          inputBox.value = divide(firstNumber, secondNumber);
+        }
+        inputBox.focus();
+      });
+
+      clearButton.addEventListener("click", function () {
+        inputBox.value = "";
+        first = "";
+        second = "";
+        operation = "";
+      });
+
+      zeroButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "0";
+          inputBox.value = first;
+        } else {
+          second = second + "0";
+          inputBox.value = second;
+        }
+      });
+
+      oneButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "1"; // '' + '1' = '1'; '1' + '1' = '11'
+          inputBox.value = first;
+        } else {
+          second = second + "1";
+          inputBox.value = second;
+        }
+      });
+
+      twoButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "2";
+          inputBox.value = first;
+        } else {
+          second = second + "2";
+          inputBox.value = second;
+        }
+      });
+
+      threeButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "3";
+          inputBox.value = first;
+        } else {
+          second = second + "3";
+          inputBox.value = second;
+        }
+      });
+
+      fourButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "4";
+          inputBox.value = first;
+        } else {
+          second = second + "4";
+          inputBox.value = second;
+        }
+      });
+
+      fiveButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "5";
+          inputBox.value = first;
+        } else {
+          second = second + "5";
+          inputBox.value = second;
+        }
+      });
+
+      sixButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "6";
+          inputBox.value = first;
+        } else {
+          second = second + "6";
+          inputBox.value = second;
+        }
+      });
+
+      sevenButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "7";
+          inputBox.value = first;
+        } else {
+          second = second + "7";
+          inputBox.value = second;
+        }
+      });
+
+      eightButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "8";
+          inputBox.value = first;
+        } else {
+          second = second + "8";
+          inputBox.value = second;
+        }
+      });
+
+      nineButton.addEventListener("click", function () {
+        if (operation === "") {
+          first = first + "9";
+          inputBox.value = first;
+        } else {
+          second = second + "9";
+          inputBox.value = second;
+        }
+      });
+
+      // function symbol(obj){
+      // 	operation = obj.value;
+
+      // 	one = document.getElementById("inputbox").value;
+      // 	one = parseInt(one);
+      // 	document.getElementById("inputbox").value = "";
+      // }
+    </script>
+  </body>
+</html>

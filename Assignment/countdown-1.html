@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SALAH COUNTDOWN</title>
+    <link rel="stylesheet" href="countdown-1.css" />
+  </head>
+  <body>
+    <p class="countdown--title">SALAH COUNTDOWN</p>
+    <p class="countdown--text">
+      Salah or salat, are prayers performed by Muslims. Facing the qibla, the
+      direction of the Kaaba with respect to those praying, many to most Muslims
+      pray first standing and later kneeling or sitting on the ground, reciting
+      prescribed prayers and phrases from the Quran as they bow and prostrate
+      themselves in between. And we have a few days to celebrate Salah. Here's
+      the countdown.
+    </p>
+    <div class="countdown__container">
+      <div class="container--box">
+        <span class="number" id="day--box">00</span>
+        <span class="text">Days</span>
+      </div>
+
+      <div class="container--box">
+        <span class="number" id="hour--box">00</span>
+        <span class="text">Hours</span>
+      </div>
+
+      <div class="container--box">
+        <span class="number" id="minute--box">00</span>
+        <span class="text">Minutes</span>
+      </div>
+
+      <div class="container--box">
+        <span class="number" id="second--box">00</span>
+        <span class="text">Seconds</span>
+      </div>
+    </div>
+
+    <script>
+      function countToSalah() {
+        // Get current Date
+        let currentDate = new Date();
+
+        // Set the target Date to salah
+        let targetDate = new Date(currentDate.getFullYear(), 5, 29);
+
+        // Calculate the time difference in milliseconds
+        let diff = targetDate.getTime() - currentDate.getTime();
+
+        // Check if the target date has pass
+        if (diff === 0) {
+          clearInterval(countInterval);
+          return;
+        }
+
+        // Calculate the remaining time
+        const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+        const minutes = Math.floor(diff / (1000 * 60)) % 60;
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("day--box").textContent = day
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("hour--box").textContent = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minute--box").textContent = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("second--box").textContent = seconds
+          .toString()
+          .padStart(2, "0");
+      }
+
+      const countInterval = setInterval(() => {
+        countToSalah();
+      }, 1000);
+    </script>
+  </body>
+</html>

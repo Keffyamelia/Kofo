@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation</title>
+    </head>
+    <body>
+     <script>
+        function validateDate(date) {
+            //regex pattern for date
+            const re = /\S+@\S+\.\S+/g;
+
+            //check if the date is valid
+            let result = re.test (date);
+            if (result) {
+                alert("The date is valid,");
+            }
+            else {
+                let newDate = prompt("Enter a valid date:");
+                validateDate(newDate);
+            }
+        } 
+
+        //take input
+        let date = prompt("Enter a date:");
+        validateDate(date);
+     </script>
+    </body>
+</html>

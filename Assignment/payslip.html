@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payslip</title>
+    <link rel="stylesheet" href="payslip.css" />
+  </head>
+  <body>
+    <div id="input__heading">
+    
+      <form>
+        <h1 class="company__name">ELIS GLOBAL SCHOOL</h1>
+        <div class="input__heading--1">
+        </div>
+
+        <div class="input__heading--2">
+          <label for="basicsalary">Basic Salary</label>
+          <input type="text" name="basicsalary" id="basicsalary" value="" placeholder="Enter salary here" />
+
+          <label for="housingallowance">Housing Allowance</label>
+          <input type="text" name="housingllowance" id="housingallowance" placeholder="Enter allowance here"/>
+
+          <label for="transportallowance">Transport Allowance</label>
+          <input
+            type="text"
+            name="transportallowance"
+            id="transportallowance"
+            placeholder="Enter allowance here"
+          />
+
+          <br />
+          <br />
+
+          <input
+            type="button"
+            name="calculate"
+            id="calculate"
+            value="CALCULATE"
+          />
+          
+          <br>
+          <br>
+
+          <div class="total__pay">
+            <p>Net pay:<span id="netpay"></span></p>
+            <p>Gross pay:<span id="grosspay"></span></p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let basicSalary = 0;
+      let housingAllowance = 0;
+      let transportAllowance = 0;
+
+      let grossPay = 0;
+      let netPay = 0;
+      let tax = 0.05;
+      let pension = 0.075;
+
+      let basicSalaryElement = document.getElementById("basicsalary");
+      let housingAllowanceElement = document.getElementById("housingallowance");
+      let transportAllowanceElement =
+        document.getElementById("transportallowance");
+      let netPayElement = document.getElementById("netpay");
+      let grossPayElement = document.getElementById("grosspay");
+      let calculateButton = document.getElementById("calculate");
+
+      calculateButton.addEventListener("click", function () {
+        let basicSalaryValue = basicSalaryElement.value;
+        let housingAllowanceValue = housingAllowanceElement.value;
+        let transportAllowanceValue = transportAllowanceElement.value;
+
+        basicSalary = parseFloat(basicSalaryValue);
+        housingAllowance = parseFloat(housingAllowanceValue);
+        transportAllowance = parseFloat(transportAllowanceValue);
+
+        if (basicSalary >= 1000000) {
+          tax = 0.1;
+        }
+
+        grossPay = basicSalary + housingAllowance + transportAllowance;
+
+        netPay = grossPay - tax * grossPay - pension * grossPay;
+
+        netPayElement.innerText = netPay;
+        grossPayElement.innerText = grossPay;
+      });
+    </script>
+  </body>
+</html>

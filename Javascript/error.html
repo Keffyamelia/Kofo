@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error in JavaScript</title>
+    </head>
+
+    <body>
+        <div id="result"></div>
+        <img src="baddooo.jpg" alt="Baddooo"
+        onerror="myErrorFunction()">
+
+        <img id="myimage" src="dhdhjks.jpg" alt="fake image">
+
+        <script>
+            const myErrorFunction2=()=> {alert("Unable to load image2") }
+
+
+            var pix = document.getElementById("myimage");
+            pix.addEventListener("error", myErrorFunction2);
+
+            window.onerror = function (){
+                alert("A terrible error has just occured.");
+            }
+
+            const myErrorFunction = ()=>{
+                try{
+                    alert("Error: unable to load this image.");
+                    hythttr;
+                }   catch(e){
+                    document.write(e);
+                }    finally{
+                    document.write("");
+                }
+                alert("Error: unable to load this image.");
+            }
+
+            
+
+
+            alerto("This is an error.");
+           
+            /* 1 - syntax error
+               2 - Runtime error
+               3 - Logic error
+
+               Trapping Errors
+               1 - onError()
+               2 - try ... catch()
+
+               */
+
+
+        </script>
+    </body>
+</html>

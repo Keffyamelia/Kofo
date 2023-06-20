@@ -1,0 +1,15 @@
+div{
+    padding: 10px;
+}
+form{
+    margin: auto;
+    border: 60px solid #11f4ca;
+    padding: 200px;
+    width: 400px;
+}
+#item5, #item2, #item3, #item4{
+    display: none;
+}
+text{
+    color:rgb(5, 230, 170)
+}

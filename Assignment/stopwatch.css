@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /*font-family: 'Comme', sans-serif;*/
+
+  font-size: 700;
+  /*height: 95vh;*/
+}
+
+body {
+  background-color: white;
+  font-family: "Halant", serif;
+}
+
+.stopwatch {
+  width: 450px;
+  height: 450px;
+  /*border: 1px solid black;*/
+  padding: 30px 30px;
+  margin: 20px 400px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.stopwatch__timer {
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+  padding-top: 150px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 400px;
+}
+
+#hours {
+  font-size: 700;
+}
+
+#minutes {
+  font-size: 700;
+}
+
+#seconds {
+  font-size: 700;
+}
+
+.buttons {
+  color: white;
+  /*margin-bottom: 20px;*/
+}
+
+.stopwatch__button {
+  width: 20%;
+  padding: 10px;
+  color: purple;
+  display: inline-block;
+  border-radius: 10%;
+  cursor: pointer;
+}

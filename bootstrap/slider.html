@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slider</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="popper,min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!--My slider starts from here-->
+    <div id="myslider" class="carousel slide" data-ride="carousel">
+      <!--Indicate showing at the bottom-->
+      <ul class="carousel-indicators">
+        <li class="active" data-target="#myslider" data-slide-to="0"></li>
+        <li data-target="#myslider" data-slide-to="0"></li>
+        <li data-target="#myslider" data-slide-to="0"></li>
+      </ul>
+
+      <!--The slider images-->
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="minivan1.jpeg" alt="van" width="1400px" height="500px" />
+        </div>
+        <div class="carousel-item">
+          <img src="minivan2.png" alt="van" width="1400px" height="500px" />
+        </div>
+        <div class="carousel-item">
+          <img src="minivan3.jpg" alt="van" width="1400px" height="500px" />
+        </div>
+      </div>
+
+      <!--The left and right controls-->
+      <a class="carousel-control-prev" href="#myslider" data-slide="prev"
+        ><span class="carousel-control-prev-icon"></span
+      ></a>
+      <a class="carousel-control-next" href="#myslider" data-slide="next"
+        ><span class="carousel-control-next-icon"></span
+      ></a>
+    </div>
+  </body>
+</html>

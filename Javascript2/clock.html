@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLOCK</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        font-size: 50px;
+        padding: 100px;
+        margin: auto;
+        width: 500px;
+      "
+    >
+      <div>H:</div>
+      <div id="hour"></div>
+
+      <div>M:</div>
+      <div id="minute"></div>
+
+      <div>S:</div>
+      <div id="seconds"></div>
+    </div>
+
+    <script>
+      let mm;
+      let hh;
+      let ss;
+
+      let mytime = setInterval(function () {
+        let dt = new Date();
+
+        ss = dt.getSeconds();
+        document.getElementById("seconds").innerHTML = ss;
+
+        mm = dt.getMinutes();
+        document.getElementById("minute").innerHTML = mm;
+
+        hh = dt.getHours();
+        document.getElementById("hour").innerHTML = hh;ss = dt.getSeconds();
+                document.getElementById("second").innerHTML = ss;
+            }, 1000)
+      
+    </script>
+  </body>
+</html>

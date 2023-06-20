@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Greetings</title>
+    </head>
+    <body>
+        <div id="clock" style="font-size: 70px">
+         </div>
+         <button type="button" onClick="displaytime()">Start</button>
+         <button type="button" onClick="stoptime()">Stop</button>
+
+        <script>
+            const displaytime = function(){
+           var dt = new Date();
+           var h = dt.getHours();
+           var m = dt.getMinutes();
+           var s = dt.getSeconds();
+
+           document.getElementById("clock").innerHTML = h+":"+m+":"+s;
+            }
+
+           const interval = setInterval(displaytime, 1000);
+
+           const stoptime = ()=>{clearInterval(interval)}
+           const starttime = () =>{
+            interval = setInterval(displaytime,1000);
+           }
+        
+        </script>
+    </body>
+</html>

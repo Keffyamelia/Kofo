@@ -1,0 +1,48 @@
+h1 {
+  color: #fc7643;
+  text-align: center;
+}
+
+h2 {
+  color: #273248;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.row-section {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  /* margin-left: 400px; */
+}
+
+.input-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+#jobtitle {
+  text-align: center;
+  color: #fc7643;
+}
+
+body {
+  background-color: #ffebd2;
+}
+
+input {
+  /* margin-bottom: 20px; */
+  width: 240px;
+}
+
+form {
+  padding-right: 100px;
+}
+
+select {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript looping</title>
+    </head>
+    <body>
+        <script>
+            var aproperty;
+
+            const student =  new Object();
+                student.name  =  "Hakimi Smart";
+                student.age =  24;
+                student.bankaccount = 0;
+                student.hasHouse = "No";
+                student.Maritalstatus = "Divorced";
+                student.profession =  "Soccer";
+        
+
+            document.write("Properties in Navigator object");
+            for(aproperties in student){
+                document.write(aproperties);
+                document.write("<br>");
+            }
+            document.write("End of For-in-Loop");
+        </script>
+    </body>
+</html>
