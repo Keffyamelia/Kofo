@@ -1,20 +1,55 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+.traffic__container {
+    display: block;
+}
+
 .traffic__light {
-    width: 50px;
+    width: 70px;
     border: 8px solid black;
     padding: 10px 3px;
     border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 .traffic__light > div {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    opacity: .3;
-    
+}
+
+.green--light {
+    background-color: green;
+}
+
+.yellow--light {
+    background-color: yellow;
+}
+
+.red--light{
+    background-color: red;
+}
+
+.grey--light{
+    background-color: gray;
+}
+
+.traffic__light--2 {
+    width: 70px;
+    border: 8px solid black;
+    padding: 10px 3px;
+    border-radius: 50px;
+    margin: 0 auto; 
+    margin-top: 30px;
+}
+
+.traffic__light--2 > div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
